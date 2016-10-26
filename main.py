@@ -12,11 +12,9 @@
 
 # TODO: Extend file implementation
 # 	-> xlsx
-#
-# TODO: Should non Fordham emails be included?
 
 import csv
-
+import re
 import sys
 
 # PRE: File name of CSV file to parse
@@ -40,7 +38,9 @@ def GetTargets(Chimp, Org):
 
 	for email in Chimp:
 		if email not in Org:
-			targets.append(email)
+			domain = re.search('@[\w.]+', email)
+			if domain.group(0) == '@fordham.edu':
+				targets.append(email)
 	targets.sort()
 
 	return targets
@@ -66,7 +66,7 @@ def main():
 		for email in emails:
 			f.write('{0}\n'.format(email))
 
-	print('Done! Output file is email.txt')
+	print('Done! Output file is emails.txt')
 
 if __name__ == '__main__':
 	main()
