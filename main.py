@@ -12,6 +12,8 @@
 
 # TODO: Extend file implementation
 # 	-> xlsx
+#
+# TODO: Should non Fordham emails be included?
 
 import csv
 
@@ -51,6 +53,9 @@ def main():
 	chimpFile = sys.argv[1]
 	orgFile = sys.argv[2]
 
+	print('Opened {0} to read..'.format(sys.argv[1]))
+	print('Opened {0} to read..'.format(sys.argv[2]))
+
 	MailChimp = CSVParser(chimpFile)
 	OrgSync = CSVParser(orgFile)
 
@@ -60,6 +65,8 @@ def main():
 		# Write contents of target emails to text file
 		for email in emails:
 			f.write('{0}\n'.format(email))
+
+	print('Done! Output file is email.txt')
 
 if __name__ == '__main__':
 	main()
