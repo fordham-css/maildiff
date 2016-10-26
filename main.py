@@ -31,8 +31,7 @@ def CSVParser(to_parse):
 	return results
 
 # PRE: Two lists of Email Addresses to search
-# POST: One list of email addresses that are in MailChimp
-#		and not in OrgSync
+# POST: One list of email addresses that are in MailChimp and not in OrgSync
 def GetTargets(Chimp, Org):
 	targets = []
 
