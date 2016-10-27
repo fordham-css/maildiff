@@ -1,5 +1,5 @@
 # maildiff
-Python script to find the email accounts in our MailChimp database that are not members on Orgsync
+Python script to find the Fordham email accounts in our MailChimp database that are not members on Orgsync
 
 ## Usage
 ```
