@@ -3,7 +3,7 @@ Python script to find the Fordham email accounts in our MailChimp database that 
 
 ## Usage
 ```
-./main.py <MailChimp CVS File> <OrgSync CVS File>
+python main.py <MailChimp CVS File> <OrgSync CVS File>
 ```
 
 !!!!! Order is really important. Don't mess it up. !!!!!
